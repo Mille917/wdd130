@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -7,15 +12,28 @@ nav a {
     color: white;
     display: block;
     padding: 20px;
+
 }
 
-h1 {
+main h1 {
     color: darkblue;
+    margin-bottom: 1rem;
+}
+
+main {
+    max-width: fit-content;
+    padding: 15px;
 }
 
 main img {
     width: 200px;
     height: auto;
+    border: 5px;
+    padding: 2px;
+    margin-left: 5rem;
+    box-shadow: #333;
+    border-radius: 100%;
+
 }
 
 img {
@@ -26,8 +44,11 @@ img {
     box-shadow: 0 0 30px gray;
 }
 
-p {
-    padding: 0px;
+main p {
+    margin: 10px;
+    padding: 2px;
+    font-family: 'Times New Roman', Times, serif;
+
 }
 
 aside {
@@ -47,7 +68,9 @@ aside img {
 
 footer {
     margin-top: 15px;
-    border-top: 1px solid #000;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    border-top: 10px solid #000;
     text-align: center;
 
 }

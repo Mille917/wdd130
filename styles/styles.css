@@ -1,64 +1,67 @@
+:root {
+    /* Brand & Theme Colors */
+    --primary-color: darkblue;
+    --dark-bg: #333;
+    --text-light: white;
+    --text-aside: aliceblue;
+    --border-color-dark: #000;
+    --border-color-light: rgb(0 0 0 / 0.2);
+
+    /* Spacing & Layout */
+    --spacing-sm: 2px;
+    --spacing-md: 10px;
+    --spacing-lg: 15px;
+    --spacing-xl: 1rem;
+
+    /* Common Box Shadows */
+    --shadow-soft: 0px 0px 10px #333;
+    --shadow-spread: 0 0 30px gray;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: var(--primary-color);
+    padding: var(--spacing-md);
 }
 
 nav a {
-    color: white;
+    color: var(--text-light);
     display: block;
     padding: 20px;
-
 }
 
 main h1 {
-    color: darkblue;
-    margin-bottom: 1rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xl);
 }
 
 main {
     max-width: fit-content;
-    padding: 15px;
+    padding: var(--spacing-lg);
 }
 
-main img {
-    width: 200px;
-    height: auto;
-    border: 5px;
-    padding: 2px;
-    margin-left: 5rem;
-    box-shadow: 0px 0px 10px #333;
-    border-radius: 100%;
-
-}
-
+/* Base image styling */
 img {
     inline-size: 150px;
     block-size: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    border: 1px solid var(--border-color-dark);
+    padding: var(--spacing-sm);
+    box-shadow: var(--shadow-spread);
 }
 
-main p {
-    margin: 10px;
-    padding: 0px;
-    font-family: 'Times New Roman', Times, serif;
-
-}
-
-aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0/0.2);
-    padding: 1rem;
-    background-color: #333;
-    text-align: center;
-    color: aliceblue;
+/* Scoped overrides */
+main img {
+    width: 200px;
+    height: auto;
+    border-width: 5px;
+    border-style: solid;
+    margin-left: 5rem;
+    box-shadow: var(--shadow-soft);
+    border-radius: 100%;
 }
 
 aside img {
@@ -66,11 +69,26 @@ aside img {
     height: auto;
 }
 
-footer {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-top: 15px;
-    border-top: 10px solid #000;
-    text-align: center;
+main p {
+    margin: var(--spacing-md);
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
 
+aside {
+    width: 20rem;
+    margin: var(--spacing-xl);
+    border: 1px solid var(--border-color-light);
+    padding: var(--spacing-xl);
+    background-color: var(--dark-bg);
+    text-align: center;
+    color: var(--text-aside);
+}
+
+footer {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 10px solid var(--border-color-dark);
+    text-align: center;
 }

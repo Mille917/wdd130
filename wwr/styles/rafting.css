@@ -1,0 +1,262 @@
+/* ==========================================================================
+   COLOR PALETTE & VARIABLE DECLARATIONS
+   ========================================================================== */
+:root {
+    --primary-color: #0d47a1;
+    /* Deep River Navy */
+    --secondary-color: #f57c00;
+    /* Sunset Adventure Orange */
+    --accent1-color: #263238;
+    /* Dark Slate Text */
+    --accent2-color: #e0f7fa;
+    /* Light Water Tint */
+    --white: #ffffff;
+
+    --heading-font: 'Montserrat', 'Helvetica Neue', sans-serif;
+    --body-font: 'Inter', Arial, sans-serif;
+}
+
+/* ==========================================================================
+   PAGE CSS RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   BASE & PAGE STRUCTURE INSTRUCTIONS
+   ========================================================================== */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    background-color: #f0f4f8;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Page container width constraint & centering */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+/* Base Headings */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Base Structural Spacing */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 3px solid var(--accent2-color);
+}
+
+header img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+header img:hover {
+    transform: scale(1.03);
+}
+
+nav[aria-label="navbar"] {
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+nav[aria-label="navbar"] a {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+nav[aria-label="navbar"] a:hover {
+    background-color: var(--accent2-color);
+    color: var(--secondary-color);
+}
+
+nav[aria-label="navbar"] a:visited {
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   HERO DIV WITH ABSOLUTE OVERLAYS
+   ========================================================================== */
+.hero {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: var(--white);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(13, 71, 161, 0.2);
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 6px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    padding: 16px 20px;
+}
+
+.hero article p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-style: italic;
+    margin: 10px 0 0 0;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    height: 90px;
+    object-fit: cover;
+    margin-left: 16px;
+    border-radius: 4px;
+    border: 2px solid var(--white);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   MAIN CONTENT SECTIONS
+   ========================================================================== */
+main {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+section {
+    background-color: var(--white);
+    border-radius: 6px;
+    border: 1px solid #eef2f6;
+    margin: 24px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--accent2-color);
+    padding-bottom: 6px;
+    display: inline-block;
+}
+
+section img {
+    width: 100%;
+    max-width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    margin: 16px 0 0 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================================
+   FOOTER & SOCIAL MEDIA
+   ========================================================================== */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid var(--accent2-color);
+    padding: 20px 24px;
+    background-color: var(--white);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.02);
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #607d8b;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.socialmedia a:hover {
+    transform: translateY(-3px);
+}
+
+.socialmedia img {
+    width: 28px;
+    height: 28px;
+    display: block;
+    opacity: 0.85;
+}
+
+.socialmedia img:hover {
+    opacity: 1;
+}

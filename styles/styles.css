@@ -21,6 +21,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 nav {
@@ -32,6 +33,12 @@ nav a {
     color: var(--text-light);
     display: block;
     padding: 20px;
+    text-decoration: none;
+    text-decoration-line: overline;
+}
+
+nav a:hover {
+    color: aquamarine;
 }
 
 main h1 {
@@ -58,10 +65,11 @@ main img {
     width: 200px;
     height: auto;
     border-width: 5px;
-    border-style: solid;
+    border-style: 1px solid var(--border-color-dark);
     margin-left: 5rem;
     box-shadow: var(--shadow-soft);
     border-radius: 100%;
+    float: right;
 }
 
 aside img {
@@ -75,6 +83,24 @@ main p {
     font-family: 'Times New Roman', Times, serif;
 }
 
+footer {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 10px solid var(--border-color-dark);
+    text-align: center;
+}
+
+/* Class Selectors */
+
+.box {
+    margin: 1rem;
+    border: 1px solid var(--border-color-light);
+    padding: 1rem;
+    background-color: #333;
+    color: var(--text-aside);
+}
+
 aside {
     width: 20rem;
     margin: var(--spacing-xl);
@@ -83,12 +109,24 @@ aside {
     background-color: var(--dark-bg);
     text-align: center;
     color: var(--text-aside);
+    position: relative;
 }
 
-footer {
-    margin-top: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-    padding-top: var(--spacing-lg);
-    border-top: 10px solid var(--border-color-dark);
-    text-align: center;
+aside h2 {
+    position: relative;
+    top: auto;
+    left: auto;
+}
+
+main a {
+    color: whitesmoke;
+    text-transform: lowercase;
+}
+
+main a:is(:visited, :hover) {
+    color: #a8a8a8;
+}
+
+main a:hover {
+    color: #ff9900;
 }

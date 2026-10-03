@@ -4,80 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta description="about us page">
-    <meta author="Raissa Bomboko Bofanga">
-    <title>About me</title>
+    <meta name="description"
+      content="About Us page for Rafting Plus - Learn about our history and adventures.">
+    <meta name="author" content="Raissa Bomboko Bofanga">
+    <title>About Us | Rafting Plus</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
     <header>
-        <img src="images/z-raftingbw.png" alt="logo">
-        <nav aria-label="navbar">
+        <img src="images/z-raftingbw.png" alt="Rafting Plus Logo" class="logo">
+        <nav aria-label="Main Navigation">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
+            <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
+
     <main>
+        <!-- HERO BANNER -->
         <div class="hero">
-            <img src="images/rafting14_banner.jpg" alt="banner">
+            <img src="images/rafting14_banner.jpg" alt="Rafting Banner" class="hero-bg">
             <h1>Rafting Plus</h1>
             <article>
-                <img src="images/rafting59_customer.jpg" alt="happy_customer">
+                <img src="images/rafting59_customer.jpg" alt="Happy Customer">
                 <p>Tame your fear, tame the river.</p>
             </article>
-            <section>
-                <h2>History</h2>
-                <p>Since 1892 our purpose was to make people happy by experiencing new way to
-                    discover the nature. Everything started the day the queen ask Diego Cao to
-                    travel the world; Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Voluptas qui et quisquam officia reprehenderit in ad eligendi asperiores libero
-                    quaerat!</p>
-            </section>
-            <section>
-                <h2>Adventure Awaits You!</h2>
-                <figure>
-                    <img src="images/rafting42_600.jpg" alt="fun">
-                    <figcaption>Happy customers rafting on the river</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting12_Fun.jpg" alt="fun">
-                    <figcaption>Happy customers rafting on the river</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting18_group.jpg" alt="fun">
-                    <figcaption>Happy customers rafting on the river</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting47_river.jpg" alt="fun">
-                    <figcaption>Happy customers rafting on the river</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/rafting56_men.jpg" alt="fun">
-                    <figcaption>Happy customers rafting on the river</figcaption>
-                </figure>
-            </section>
         </div>
+
+        <!-- HISTORY SECTION -->
+        <section class="history">
+            <h2>History</h2>
+            <div class="history-content">
+                <p>Since 1892, our purpose has been to make people happy by experiencing a new way
+                    to discover nature.
+                    Everything started the day the queen asked Diego Cao to travel the world. Lorem
+                    ipsum dolor sit amet,
+                    consectetur adipisicing elit. Voluptas qui et quisquam officia reprehenderit in
+                    ad eligendi asperiores libero quaerat!</p>
+            </div>
+        </section>
+
+        <!-- ADVENTURES GALLERY SECTION -->
+        <section class="adventures">
+            <h2>Adventure Awaits You!</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/rafting42_600.jpg" alt="Los Dientes del Diablo rapid">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting12_Fun.jpg" alt="Big Mallard rapid">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting18_group.jpg" alt="Half Day Adventurer trip">
+                    <figcaption>Half Day Adventurer</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting47_river.jpg" alt="Happy customers rafting">
+                    <figcaption>Happy Customers</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting59_customer.jpg" alt="Eldorado river trip">
+                    <figcaption>Eldorado River</figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy;
-            <script>document.write(new Date().getFullYear()); </script> &#10020; Rafting Plus
-            &#10020; Raïssa Bomboko Bofanga
-        </p>
+        <p>&copy; <span id="year"></span> Rafting Plus &#10020; Raïssa Bomboko Bofanga</p>
         <nav class="socialmedia" aria-label="Social media links">
-            <a href="https://facebook.com" target="_blank">
-                <img src="images/facebooksvg.svg" alt="Facebook Icon">
+            <a href="https://facebook.com" target="_blank" rel="noopener">
+                <img src="images/facebook.png" alt="Facebook Icon">
             </a>
-            <a href="https://linkedin.com" target="_blank">
-                <img src="images/linkedinsvg.svg" alt="LinkedIn Icon">
+            <a href="https://linkedin.com" target="_blank" rel="noopener">
+                <img src="images/linkedin.png" alt="LinkedIn Icon">
             </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/instagramsvg.svg" alt="Instagram Icon">
+            <a href="https://instagram.com" target="_blank" rel="noopener">
+                <img src="images/instagram.png" alt="Instagram Icon">
             </a>
         </nav>
     </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>

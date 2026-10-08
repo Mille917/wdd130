@@ -1,26 +1,132 @@
+:root {
+    /* Brand & Theme Colors */
+    --primary-color: darkblue;
+    --dark-bg: #333;
+    --text-light: white;
+    --text-aside: aliceblue;
+    --border-color-dark: #000;
+    --border-color-light: rgb(0 0 0 / 0.2);
+
+    /* Spacing & Layout */
+    --spacing-sm: 2px;
+    --spacing-md: 10px;
+    --spacing-lg: 15px;
+    --spacing-xl: 1rem;
+
+    /* Common Box Shadows */
+    --shadow-soft: 0px 0px 10px #333;
+    --shadow-spread: 0 0 30px gray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: var(--primary-color);
+    padding: var(--spacing-md);
 }
 
 nav a {
-    color: white;
+    color: var(--text-light);
     display: block;
     padding: 20px;
+    text-decoration: none;
+    text-decoration-line: overline;
 }
 
-h1 {
-    color: darkblue;
+nav a:hover {
+    color: aquamarine;
 }
 
+main h1 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xl);
+}
+
+main {
+    max-width: fit-content;
+    padding: var(--spacing-lg);
+}
+
+/* Base image styling */
 img {
     inline-size: 150px;
     block-size: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    border: 1px solid var(--border-color-dark);
+    padding: var(--spacing-sm);
+    box-shadow: var(--shadow-spread);
 }
 
-p {
-    padding: 10px;
+/* Scoped overrides */
+main img {
+    width: 200px;
+    height: auto;
+    border-width: 5px;
+    border-style: 1px solid var(--border-color-dark);
+    margin-left: 5rem;
+    box-shadow: var(--shadow-soft);
+    border-radius: 100%;
+    float: right;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+main p {
+    margin: var(--spacing-md);
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 10px solid var(--border-color-dark);
+    text-align: center;
+}
+
+/* Class Selectors */
+
+.box {
+    margin: 1rem;
+    border: 1px solid var(--border-color-light);
+    padding: 1rem;
+    background-color: #333;
+    color: var(--text-aside);
+}
+
+aside {
+    width: 20rem;
+    margin: var(--spacing-xl);
+    border: 1px solid var(--border-color-light);
+    padding: var(--spacing-xl);
+    background-color: var(--dark-bg);
+    text-align: center;
+    color: var(--text-aside);
+    position: relative;
+}
+
+aside h2 {
+    position: relative;
+    top: auto;
+    left: auto;
+}
+
+main a {
+    color: whitesmoke;
+    text-transform: lowercase;
+}
+
+main a:is(:visited, :hover) {
+    color: #a8a8a8;
+}
+
+main a:hover {
+    color: #ff9900;
 }

@@ -1,0 +1,250 @@
+/* ==========================================================================
+   COLOR PALETTE & VARIABLE DECLARATIONS
+   ========================================================================== */
+:root {
+    --primary-color: #0d47a1;
+    /* Deep River Navy */
+    --secondary-color: #f57c00;
+    /* Sunset Adventure Orange */
+    --accent1-color: #263238;
+    /* Dark Slate Text */
+    --accent2-color: #e0f7fa;
+    /* Light Water Tint */
+    --white: #ffffff;
+
+    --heading-font: 'Montserrat', 'Helvetica Neue', sans-serif;
+    --body-font: 'Inter', Arial, sans-serif;
+}
+
+/* ==========================================================================
+   PAGE CSS RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   BASE & PAGE STRUCTURE
+   ========================================================================== */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    background-color: #f0f4f8;
+    line-height: 1.6;
+}
+
+/* Container principal de 840px */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+/* Headings */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION 
+   ========================================================================== */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 3px solid var(--accent2-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+header .logo {
+    height: 60px;
+    width: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+header nav a {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+header nav a:hover {
+    background-color: var(--accent2-color);
+    color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   HERO BANNER
+   ========================================================================== */
+.hero {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.hero .hero-bg {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(38, 50, 56, 0.75);
+    color: var(--white);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero article {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 6px;
+    padding: 16px;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero article p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-style: italic;
+    margin: 25px 25px 25px 25px;
+}
+
+.hero article img {
+    float: right;
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   MAIN CONTENT SECTIONS
+   ========================================================================== */
+main {
+    padding: 20px 0;
+}
+
+section {
+    background-color: var(--white);
+    margin: 24px;
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--accent2-color);
+    padding-bottom: 6px;
+}
+
+/* --- SECTION HISTORY --- */
+.history p {
+    font-size: 1rem;
+    color: var(--accent1-color);
+}
+
+/* --- SECTION ADVENTURES --- */
+.adventures .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.adventures figure {
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+}
+
+.adventures figure img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.adventures figure figcaption {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    font-family: var(--body-font);
+    font-size: 0.75rem;
+    padding: 8px 4px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid var(--accent2-color);
+    padding: 20px 24px;
+    background-color: var(--white);
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: var(--accent1-color);
+}
+
+.socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.socialmedia a:hover {
+    transform: translateY(-3px);
+}
+
+.socialmedia img {
+    width: 28px;
+    height: 28px;
+    display: block;
+}

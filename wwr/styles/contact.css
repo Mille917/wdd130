@@ -26,14 +26,14 @@ main {
     display: flex;
     padding: 2rem;
     margin: 2rem;
-    gap: 2rem;
+    gap: 4rem;
 
 }
 
 .map-section iframe {
     inline-size: 100%;
-    block-size: 100%;
-    min-block-size: 450px;
+    block-size: 10%;
+    min-block-size: 350px;
     border-radius: 8px;
     border: none;
 }
@@ -82,7 +82,7 @@ main {
 }
 
 .newsletter-item {
-    display: flex;
+    display: block;
     align-items: center;
     gap: 0.5rem;
     color: #000;
@@ -109,7 +109,6 @@ main {
 
 /* --- Section de l'équipe --- */
 .team-section {
-    inline-size: 100%;
     background-color: #f4f4f4;
     text-align: center;
     margin-block-start: 2rem;

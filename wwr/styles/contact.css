@@ -81,6 +81,13 @@ main {
     justify-content: center;
 }
 
+.newsletter-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #000;
+}
+
 /* Style pour aligner chaque bouton radio avec son texte */
 .contact-item3 input[type="radio"] {
     display: inline-flex;

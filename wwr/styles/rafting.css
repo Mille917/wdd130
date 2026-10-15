@@ -501,7 +501,7 @@ main {
 }
 
 .trips-cta-banner h2 {
-    font-weight: 1.6rem;
+    font-weight: 1.6;
     color: var(--primary-color);
     margin-bottom: 10px;
 }

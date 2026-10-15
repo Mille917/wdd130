@@ -531,8 +531,8 @@ main {
     transition: transform 0.2s ease;
 }
 
-.trip-card :hover {
-    transform: translateY(-5);
+.trip-card:hover {
+    transform: translateY(-5px);
 }
 
 .trip-card img {

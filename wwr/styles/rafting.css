@@ -506,7 +506,7 @@ main {
    TRIPS
    ========================================================================== */
 .trips-cta-banner {
-    background-color: var(--accent2-color);
+    background-color: bisque;
     text-align: center;
     border-radius: 8px;
     padding: 30px 20px;
@@ -515,7 +515,7 @@ main {
 }
 
 .trips-cta-banner h2 {
-    font-weight: 1.6;
+    font-weight: 2;
     color: var(--primary-color);
     margin-bottom: 10px;
 }
@@ -559,21 +559,22 @@ main {
 }
 
 .trip-card h3 {
-    font-size: 0.9rem;
-    color: var(--accent1-color);
-    margin-bottom: 16px;
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin: 6px;
     flex-grow: 1;
     line-height: 1.5;
-    padding-left: 4px;
+
 }
 
 .trip-card p {
     font-size: 0.9rem;
     color: var(--accent1-color);
-    margin-bottom: 2px;
+    margin: 2px;
     flex-grow: 1;
     line-height: 1.5;
-    padding-left: 4px;
+    font-style: oblique;
+
 }
 
 .trip-badge {
@@ -604,6 +605,7 @@ table {
     background-color: var(--white);
     text-align: left;
     font-size: 0.95rem;
+    border: 2px solid blue;
 }
 
 th,

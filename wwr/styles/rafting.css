@@ -91,6 +91,12 @@ header nav a:hover {
     color: var(--secondary-color);
 }
 
+header nav a.active {
+    background-color: var(--accent2-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
 /* ==========================================================================
    HERO BANNER
    ========================================================================== */
@@ -390,22 +396,27 @@ main {
 
 /* Titre principal positionné par-dessus l'image */
 .home-hero h1 {
-    position: relative;
-    top: 30px;
+    position: absolute;
+    top: 1px;
     left: 0;
-    width: 100%;
-    padding: 15px;
+    right: 0;
+    width: fit-content;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 12px 24px;
     text-align: center;
     background-color: rgba(38, 50, 56, 0.75);
     color: var(--white);
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border-radius: 4px;
 }
 
 .home-hero img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 /* Encadré d'information positionné en bas sur l'image */
@@ -456,6 +467,7 @@ main {
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 12px;
+    border: 2px solid beige;
 }
 
 .home-grid .card p {
